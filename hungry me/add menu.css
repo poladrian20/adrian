@@ -1,0 +1,261 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background-color: #7B8B75;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    color: #00B074
+  
+}
+h
+.dashboard {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Submenu (Hidden by default) */
+.sidebar .submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+/* Active (clicked) submenu item */
+.sidebar .submenu-item.active {
+    color: #ffffff;
+    background-color: #00B074;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: black;
+    margin: 0;
+    padding: 10px 0;
+}
+/* Show submenu when parent is active */
+.sidebar a.active + .submenu {
+    display: block;
+}
+/* Submenu items */
+.sidebar .submenu a {
+    font-size: 14px;
+    color: #6B6B6B;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .submenu a:hover {
+    color: #00B074;
+}
+
+/* Radio button styles */
+.sidebar .submenu input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Logout */
+.sidebar .logout {
+    margin-top: auto;
+    color: #A1A1A1;
+    font-size: 16px;
+    margin-top: 480px;
+}
+
+.sidebar .logout:hover {
+    color: #E66767;
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #00B074;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    background: none;
+    border: none;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #7B8B75;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #394C3B;
+    padding: 10px 20px;
+    border-bottom: 1px solid #4E604E;
+    height: 60px; /* Adjust topbar height */
+}
+
+.profile-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+}
+.profile-actions img {
+    margin-left: 10px; /* Adds space from the search bar */
+    width: 40px;
+}
+
+
+.topbar-left, .topbar-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+.topbar input[type="search"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #526D56;
+    width: 866px;
+    height: 36px;
+}
+
+/* Main Content */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-left: 260px;
+}
+
+/* Form Container */
+.form-container {
+    background: #E4E4E4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    margin: 20px auto;
+    margin-right: 100px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Form Input Styling */
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px; /* Increased padding for better alignment */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Ensures consistent text size */
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Align Placeholder Text Properly */
+.form-group input::placeholder {
+    color: #D9D9D9;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* Fixing misalignment in form container */
+.form-container {
+    background: #D9D9D9;
+    padding: 25px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: 50%; /* Adjusted width for better alignment */
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center labels and inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text properly */
+    width: 100%;
+}
+
+/* Adjust button width for better alignment */
+.btn {
+    width: 100%;
+    background: green;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: darkgreen;
+}
+

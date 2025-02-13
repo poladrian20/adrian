@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="img.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script defer src="dashboard.js"></script>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-left">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div class="profile-actions">
+            <img src="img.png" alt="Profile">
+        </div>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <button class="closebtn" onclick="closeNav()">×</button>
+        <h1>HungryMe.</h1>
+    
+        <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+
+        <a href="users.html"><i class="fas fa-user"></i> Users</a>
+        <div class="submenu">
+            <label><input type="radio" name="users"> All Users</label>
+        </div>
+    
+        <a href="#"><i class="fas fa-receipt"></i> Recent Orders</a>
+        <a href="#"><i class="fas fa-file-invoice"></i> Transaction History</a>
+    
+       
+            <!-- Menu Section -->
+            <a href="#" class="toggle"><i class="fas fa-utensils"></i> Menu <i class="fas fa-chevron-up"></i></a>
+            <div class="submenu">
+                <a href="add menu.html"></i> Add Menu</a>
+        
+                <a href="drinks.html"><i class="fas fa-coffee"></i> Drinks </a>
+                <div class="submenu">
+                    <label><input type="radio" name="drinks"> Add New</label>
+                </div>
+        
+                <a href="snacks.html"><i class="fas fa-bars"></i> Snacks</a>
+                <div class="submenu">
+                    <label><input type="radio" name="snacks"> Add New</label>
+                </div>
+            </div>
+    
+        <a href="admin-login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="dashboard-cards">
+            <div class="card"> <h3>Users</h3> <p>3</p> </div>
+            <div class="card"> <h3>Menu</h3> <p>2</p> </div>
+        </div>
+    </div>
+</body>
+</html>
