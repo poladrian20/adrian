@@ -4,84 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Menu</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="add menu.css">
-    <script defer src="add menu.js"></script>
-</head>
-<body>
-    <div class="topbar">
-        <div class="topbar-left">
-            <button class="openbtn" onclick="openNav()">☰</button>
-        </div>
-        <div class="profile-actions">
-            <img src="img.png" alt="Profile">
-        </div>
-    </div>
+    <link rel="icon" type="image/png" href="img.png">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+     <link rel="stylesheet" href="add menu.css">
+     <script defer src="add menu.js"></script>
+ </head>
+ <body>
+     <div class="topbar">
+         <div class="topbar-left">
+             <button class="openbtn" onclick="openNav()">☰</button>
+         </div>
+         <div class="profile-actions">
+             <img src="img.png" alt="Profile">
+         </div>
+     </div>
 
+    <!--sidebar-->
     <div id="mySidebar" class="sidebar">
         <button class="closebtn" onclick="closeNav()">×</button>
         <h1>HungryMe.</h1>
     
-        <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+        <a href="dashboard.html">
+            <span class="material-symbols-outlined">grid_view</span> Dashboard
+        </a>
 
-        <a href="users.html"><i class="fas fa-user"></i> Users</a>
+        <a href="users.html">
+            <span class="material-symbols-outlined">person</span> Users
+        </a>
+
+        <a href="#">
+            <span class="material-symbols-outlined">list_alt</span> Recent Orders
+        </a>
+
+        <a href="#">
+            <span class="material-symbols-outlined">receipt</span> Transaction History
+        </a>
+
+        <a href="#"
+        class="toggle"><span class="material-symbols-outlined">menu_book</span> Menu 
+        <i class="fas fa-chevron-up"></i>
+        </a>
         <div class="submenu">
-            <label><input type="radio" name="users"> All Users</label>
+            <a href="add menu.html"><span class="material-symbols-outlined">add_to_queue</span> Add Menu
+        </a>              
         </div>
-    
-        <a href="#"><i class="fas fa-receipt"></i> Recent Orders</a>
-        <a href="#"><i class="fas fa-file-invoice"></i> Transaction History</a>
-    
-       
-            <!-- Menu Section -->
-            <a href="#" class="toggle"><i class="fas fa-utensils"></i> Menu <i class="fas fa-chevron-up"></i></a>
-            <div class="submenu">
-                <label><input type="radio" name="menu"> Add New</label>
+
+        <a href="#" 
+        class="toggle"><span class="material-symbols-outlined">local_pizza</span> Snacks
+        <i class="fas fa-chevron-up"></i>
+        </a>
+        <div class="submenu">
+            <a href="add snacks.html"> <span class="material-symbols-outlined">add_to_queue</span>Add Snacks </a>
+        </div>            
+
+        <a href="#" 
+        class="toggle"><span class="material-symbols-outlined">local_bar</span> Drinks 
+        <i class="fas fa-chevron-up"></i>
+        </a>
+        <div class="submenu">
+            <a href="add drinks.html"> <span class="material-symbols-outlined">add_to_queue</span>Add Drinks </a>
+        </div>
         
-                <a href="drinks.html"><i class="fas fa-coffee"></i> Drinks </a>
-                <div class="submenu">
-                    <label><input type="radio" name="drinks"> Add New</label>
-                </div>
-        
-                <a href="snacks.html"><i class="fas fa-bars"></i> Snacks</a>
-                <div class="submenu">
-                    <label><input type="radio" name="snacks"> Add New</label>
-                </div>
-            </div>
-    
-        <a href="admin-login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <a href="admin-login.html" class="logout"><span class="material-symbols-outlined"> logout</span>Logout
+        </a>
     </div>
 
-    <div class="content">
-        <div class="form-container">
-            <h3>ADD MENU</h3>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label>Snack</label>
-                    <input type="text" placeholder="Enter snack name">
-                </div>
-
-                <div class="form-group">
-                    <label>Category</label>
-                    <select>
-                        <option>Menue</option>
-                        <option>Drinks</option>
-                        <option>Snacks</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Price</label>
-                    <input type="text" placeholder="Enter price">
-                </div>
-
-                <div class="form-group">
-                    <label>Image</label>
-                    <input type="file">
-                </div>
-
-                <button class="btn">ADD</button>
+    <div class="form-container">
+        <h3>ADD MENU</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Dish</label>
+                <input type="text" placeholder="Enter Dish">
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select>
+                    <option>Menu</option>
+                    <option>Snacks</option>
+                    <option>Drinks</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Price</label>
+                <input type="text" placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label>Image</label>
+                <input type="file">
+            </div>
+        </div>
+        <a href="dish.html" class="btn">ADD</a>
+    </div>
+    
             </form>
         </div>
     </div>

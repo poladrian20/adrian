@@ -274,3 +274,16 @@ label {
 }
 
 
+/* Responsive layout - when the screen is less than 600px wide, make the sidebar and content full width */
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {
+        margin-left: 0;
+    }
+}
+

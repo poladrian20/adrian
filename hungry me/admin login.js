@@ -28,16 +28,17 @@ form.addEventListener('submit', e => {
     }
 });
 
-// 👁️ Toggle password visibility
+// 👁️ Toggle password visibility (FIXED)
 togglePassword.addEventListener('click', () => {
-    if (password.type === 'password') {
-        password.type = 'text';
-        togglePassword.innerHTML = '<i class="fa-regular fa-eye-slash"></i>';
-    } else {
+    if (password.type === 'text') {
         password.type = 'password';
-        togglePassword.innerHTML = '<i class="fa-regular fa-eye"></i>';
+        togglePassword.innerHTML = '<i class="fa-regular fa-eye-slash"></i>'; // 👀 Show eye when visible
+    } else {
+        password.type = 'text';
+        togglePassword.innerHTML = '<i class="fa-regular fa-eye"></i>'; // 🙈 Hide eye when hidden
     }
 });
+
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;

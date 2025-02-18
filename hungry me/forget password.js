@@ -41,11 +41,11 @@ togglePassword2.addEventListener('click', () => {
 
 // 🔹 Function to toggle password visibility
 function toggleVisibility(inputField, toggleIcon) {
-    if (inputField.type === 'password') {
-        inputField.type = 'text';
+    if (inputField.type === 'text') {
+        inputField.type = 'password';
         toggleIcon.innerHTML = '<i class="fa-regular fa-eye-slash"></i>';
     } else {
-        inputField.type = 'password';
+        inputField.type = 'text';
         toggleIcon.innerHTML = '<i class="fa-regular fa-eye"></i>';
     }
 }
@@ -84,6 +84,9 @@ const validateInputs = () => {
 
     if (usernameValue === '') {
         setError(username, 'Username is required');
+        isValid = false;
+    } else if (usernameValue.length < 3) {
+        setError(username, 'Username must be at least 3 characters.');
         isValid = false;
     } else {
         setSuccess(username);

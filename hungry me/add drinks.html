@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Add Drinks</title>
     <link rel="icon" type="image/png" href="img.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
-    <link rel="stylesheet" href="dashboard.css">
-    <script defer src="dashboard.js"></script>
-</head>
-<body>
-    <div class="topbar">
-        <div class="topbar-left">
-            <button class="openbtn" onclick="openNav()">☰</button>
-        </div>
-        <div class="profile-actions">
-            <img src="img.png" alt="Profile">
-        </div>
-    </div>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+     <link rel="stylesheet" href="add drinks.css">
+     <script defer src="add snacks.js"></script>
+ </head>
+ <body>
+     <div class="topbar">
+         <div class="topbar-left">
+             <button class="openbtn" onclick="openNav()">☰</button>
+         </div>
+         <div class="profile-actions">
+             <img src="img.png" alt="Profile">
+         </div>
+     </div>
 
     <!--sidebar-->
     <div id="mySidebar" class="sidebar">
@@ -64,18 +64,43 @@
         <i class="fas fa-chevron-up"></i>
         </a>
         <div class="submenu">
-            <a href="add drinks.html"> <span class="material-symbols-outlined">add_to_queue</span>Add Drinks </a>
+            <a href="drinks.html"> <span class="material-symbols-outlined">add_to_queue</span>Add Drinks </a>
         </div>
         
         <a href="admin-login.html" class="logout"><span class="material-symbols-outlined"> logout</span>Logout
         </a>
     </div>
 
-    <!-- Main Content -->
-    <div class="content">
-        <div class="dashboard-cards">
-            <div class="card"> <h3>Users</h3> <p>3</p> </div>
-            <div class="card"> <h3>Menu</h3> <p>2</p> </div>
+    <div class="form-container">
+        <h3>ADD MENU</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Drinks</label>
+                <input type="text" placeholder="Enter drinks">
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select>
+                    <option>Menu</option>
+                    <option>Snacks</option>
+                    <option>Drinks</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Price</label>
+                <input type="text" placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label>Image</label>
+                <input type="file">
+            </div>
+        </div>
+        <a href="drinks.html" class="btn">ADD</a>
+    </div>
+    
+            </form>
         </div>
     </div>
 </body>

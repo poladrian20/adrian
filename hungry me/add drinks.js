@@ -52,20 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ✅ Toggle submenu visibility & flip chevron icon
+    // ✅ Toggle submenu visibility only if submenu exists
     submenuToggles.forEach(toggle => {
         toggle.addEventListener("click", event => {
-            event.preventDefault();
             const submenu = toggle.nextElementSibling;
-            const chevronIcon = toggle.querySelector("i.fa-chevron-up, i.fa-chevron-down");
-
             if (submenu && submenu.classList.contains("submenu")) {
-                // Toggle submenu visibility
+                event.preventDefault(); // Prevent default only if submenu exists
                 submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-
-                // Flip chevron icon
-                chevronIcon.classList.toggle("fa-chevron-up");
-                chevronIcon.classList.toggle("fa-chevron-down");
             }
         });
     });

@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const deleteIcons = document.querySelectorAll(".delete-icon");
     const submenuToggles = document.querySelectorAll(".sidebar .toggle");
     const submenuItems = document.querySelectorAll(".submenu-item");
-    const userLabel = document.querySelector(".clickable-label"); // Selecting the "All Users" label
 
     // ✅ Edit button functionality
     editButtons.forEach(button => {
@@ -52,21 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ✅ Toggle submenu visibility & flip chevron icon
+    // ✅ Toggle submenu visibility when clicking a toggle button
     submenuToggles.forEach(toggle => {
         toggle.addEventListener("click", event => {
             event.preventDefault();
             const submenu = toggle.nextElementSibling;
-            const chevronIcon = toggle.querySelector("i.fa-chevron-up, i.fa-chevron-down");
-
-            if (submenu && submenu.classList.contains("submenu")) {
-                // Toggle submenu visibility
-                submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-
-                // Flip chevron icon
-                chevronIcon.classList.toggle("fa-chevron-up");
-                chevronIcon.classList.toggle("fa-chevron-down");
-            }
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
         });
     });
 
@@ -77,11 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.toggle("active"); // Toggles blue background
         });
     });
-
-    // ✅ Redirect to users.html when clicking "All Users" label
-    if (userLabel) {
-        userLabel.addEventListener("click", () => {
-            window.location.href = "menu.html"; // Redirect when clicked
-        });
-    }
 });

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>HungryMe Admin Dashboard</title>
     <link rel="icon" type="image/x-icon" href="img.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="users.css">
     <script defer src="users.js"></script>
 </head>
@@ -13,39 +16,55 @@
       
         
 
-        <div id="mySidebar" class="sidebar">
-            <button class="closebtn" onclick="closeNav()">×</button>
-            <h1>HungryMe.</h1>
-        
-            <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
-        
-            <a href="users.html"><i class="fas fa-user"></i> Users</a>
-            <div class="submenu">
-                <label><input type="radio" name="users"> All Users</label>
-            </div>
-        
-            <a href="#"><i class="fas fa-receipt"></i> Recent Orders</a>
-            <a href="#"><i class="fas fa-file-invoice"></i> Transaction History</a>
-        
-            <!-- Menu Section -->
-            <a href="#" class="toggle"><i class="fas fa-utensils"></i> Menu <i class="fas fa-chevron-up"></i></a>
-            <div class="submenu">
-                <a href="add menu.html"></i> Add Menu</a>
-        
-                <a href="drinks.html"><i class="fas fa-coffee"></i> Drinks </a>
-                <div class="submenu">
-                    <label><input type="radio" name="drinks"> Add New</label>
-                </div>
-        
-                <a href="snacks.html"><i class="fas fa-bars"></i> Snacks</a>
-                <div class="submenu">
-                    <label><input type="radio" name="snacks"> Add New</label>
-                </div>
-            </div>
-        
-        
-            <a href="admin-login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-        </div>
+<!--sidebar-->
+<div id="mySidebar" class="sidebar">
+    <button class="closebtn" onclick="closeNav()">×</button>
+    <h1>HungryMe.</h1>
+
+    <a href="dashboard.html">
+        <span class="material-symbols-outlined">grid_view</span> Dashboard
+    </a>
+
+    <a href="users.html">
+        <span class="material-symbols-outlined">person</span> Users
+    </a>
+
+    <a href="#">
+        <span class="material-symbols-outlined">list_alt</span> Recent Orders
+    </a>
+
+    <a href="#">
+        <span class="material-symbols-outlined">receipt</span> Transaction History
+    </a>
+
+    <a href="#"
+    class="toggle"><span class="material-symbols-outlined">menu_book</span> Menu 
+    <i class="fas fa-chevron-up"></i>
+    </a>
+    <div class="submenu">
+        <a href="add menu.html"><span class="material-symbols-outlined">add_to_queue</span> Add Menu
+    </a>              
+    </div>
+
+    <a href="#" 
+    class="toggle"><span class="material-symbols-outlined">local_pizza</span> Snacks
+    <i class="fas fa-chevron-up"></i>
+    </a>
+    <div class="submenu">
+        <a href="add snacks.html"> <span class="material-symbols-outlined">add_to_queue</span>Add Snacks </a>
+    </div>            
+
+    <a href="#" 
+    class="toggle"><span class="material-symbols-outlined">local_bar</span> Drinks 
+    <i class="fas fa-chevron-up"></i>
+    </a>
+    <div class="submenu">
+        <a href="add drinks.html"> <span class="material-symbols-outlined">add_to_queue</span>Add Drinks </a>
+    </div>
+    
+    <a href="admin-login.html" class="logout"><span class="material-symbols-outlined"> logout</span>Logout
+    </a>
+</div>
         
 
     <div class="topbar">

@@ -89,22 +89,28 @@ label {
 
 /* Logout */
 .sidebar .logout {
-    margin-top: auto;
+    margin-top: 10px;
     color: #A1A1A1;
     font-size: 16px;
-    margin-top: 480px;
+    
 }
 
 .sidebar .logout:hover {
-    color: #E66767;
+    color: #ff0000;
 }
 .sidebar a {
-    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px;
     text-decoration: none;
-    font-size: 18px;
     color: #333;
-    display: block;
-    transition: 0.3s;
+    font-size: 16px;
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+    vertical-align: middle;
 }
 
 .sidebar a:hover {
